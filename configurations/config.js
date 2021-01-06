@@ -3,7 +3,7 @@ require('dotenv-flow').config();
 
 const envVarsSchema = Joi.object({
     NODE_ENV: Joi.string()
-        .allow('development', 'staging', 'production')
+        // .allow(['development', 'staging', 'production'])
         .default('development'),
     SERVER_PORT: Joi.number()
         .default(3000),

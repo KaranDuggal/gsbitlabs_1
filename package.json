@@ -15,6 +15,7 @@
     "joi": "^17.3.0",
     "joi-objectid": "^3.0.1",
     "mongoose": "^5.11.9",
-    "morgan": "~1.9.1"
+    "morgan": "~1.9.1",
+    "node-browser-history": "^2.4.1"
   }
 }

@@ -10,12 +10,22 @@ class ValidatorService{
          this.schema.userSchema = Joi.object({
             username: Joi.string().required(),
             password: Joi.string().required(),
-            age: Joi.number().required()
+            age: Joi.number().required(),
+            gender: Joi.string().required(),
+            email: Joi.string().required(),
+            favouritebook: Joi.string().required()
         });
-        this.schema.userdataSchema = Joi.object({
-            branch: Joi.string().required(),
-            pancardnumber: Joi.number().required(),
-        })
+        this.schema.bookSchema = Joi.object({
+            bookname: Joi.string().required(),
+            author: Joi.string().required(),
+            publishedon: Joi.number().required(),
+            price: Joi.number().required(),
+        });
+        this.schema.readingSchema = Joi.object({
+            userID: Joi.string().required(),
+            bookID: Joi.string().required(),
+            hour: Joi.number().required()
+        });
     }
 }
 

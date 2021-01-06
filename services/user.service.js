@@ -3,14 +3,14 @@ const dbservices = new DBservices();
 const Tuser = require('../models/user.models')
 
 class UserServices{
-    check_user_exist(query){
+    check_email_exist(query){
         console.log(query);
         return new Promise(async (resolve,reject)=>{
             try {
-                const userexist = await dbservices.findOne(Tuser,query).catch(err =>{
+                const emailexist = await dbservices.findOne(Tuser,query).catch(err =>{
                     throw err
                 })
-                resolve((userexist && userexist !== null) ? true:false)
+                resolve((emailexist && emailexist !== null) ? true:false)
             } catch (err) {
                 reject(err)
             }

@@ -12,6 +12,17 @@ class DBservices {
             })
         })
     }
+    findById(collection,userID){
+        return new Promise((resolve,reject)=>{
+            collection.findOne(userID).exec((err,data)=>{
+                if (err) {
+                    reject(err)
+                } else {
+                    resolve(data)
+                }
+            })
+        })
+    }
     save(model){
         return new Promise((resolve,reject)=>{
             model.save((err,modelSave)=>{
