@@ -20,13 +20,8 @@ class ReadingTimeServices {
     add_redingtime(data) {
         return new Promise(async (resolve, reject) => {
             try {
-                console.log('data==', data.value.userID)
-                const model = new readingTime({
-                    userID: data.value.userID,
-                    bookID: data.value.bookID,
-                    hour: data.value.hour,
-                    days: data.value.days
-                });
+                console.log("add user");
+                const model = new readingTime(data);
                 console.log('model save', model);
                 const readingtime = await dbservices.save(model)
                 resolve(readingtime)

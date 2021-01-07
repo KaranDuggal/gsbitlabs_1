@@ -11,7 +11,6 @@ require('../controllers/userreadinghour.controller')
 const userreadinghourController = new UserReadingHourController
 
 
-
 /* GET home page. */
 router.post('/user', userController.add_user)
 router.post('/book', bookController.add_book)

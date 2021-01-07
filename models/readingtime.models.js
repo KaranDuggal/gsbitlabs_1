@@ -7,7 +7,7 @@ const readingSchema = new mongoose.Schema({
     // userID: String,
     bookID: { type: mongoose.Schema.Types.ObjectId, ref: 'books', index: true },
     hour: { type: Number },
-    days: [Number]
+    // days: [Number]
 })
 
 const reading = mongoose.model('reading', readingSchema)

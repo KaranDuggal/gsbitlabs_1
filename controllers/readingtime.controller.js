@@ -25,9 +25,9 @@ module.exports = RedingTimeController = function () {
             // }
             console.log('validate data', obj);
             const readingtime = await readingtimeServices.add_redingtime(obj)
-            return res.status(200).json({ success: true, message: 'user added Successfully' })
+            return res.status(200).json({ success: true, message: 'readingTime added Successfully' })
         } catch (err) {
-            console.log("err occured at ===> add_user", err);
+            console.log("err occured at ===> add_reading time", err);
             res.status(400).json({ success: false, error: err })
         }
     }
